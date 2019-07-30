@@ -1,0 +1,15 @@
+<div class="user-wrapper row mt-3" 
+    *ngFor="let user of users; let i = index"
+    [class.active]="isActive(i)"
+    (click)="changeStatus(user, i)">
+    <div class="col-md-4">
+        <img class="img-thumbnail" [src]="user.pic" alt="" >
+        {{user.isActive}}
+    </div>
+    <div class="col-md-8 align-self-center">
+        <h3>{{user.name}}</h3>
+        <p>{{user.text}}</p>
+        <i class="far fa-thumbs-up" (click)='addCount($event, user)'></i>    
+        <span class="float-right">{{user.count}}</span>
+    </div>
+</div> 

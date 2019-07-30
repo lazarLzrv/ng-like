@@ -1,0 +1,7 @@
+.user-wrapper{
+    cursor: pointer;
+}
+
+.user-wrapper.active{
+    background: #ccc;
+}

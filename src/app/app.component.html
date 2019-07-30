@@ -1,0 +1,20 @@
+<app-main-nav></app-main-nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+                <h1 class="mt-5 mb-5">{{name}}<br>{{likes}}</h1> 
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6 mt-3">
+            <app-results [title]='appTitle'></app-results> 
+            
+        </div>
+        <div class="col-md-4">
+            <app-posts
+                (sendLikes)='getLikes($event)'
+                (sendUserName)='receiveUserName($event)'
+             ></app-posts>
+        </div>
+    </div>
+</div>
